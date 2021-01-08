@@ -1,0 +1,92 @@
+ion-toolbar {
+  --min-height: 80px;
+}
+
+ion-segment {
+  --background: #006B3E;
+}
+
+ion-segment-button {
+  --background-checked: #006B3E;
+  --color: #00BB6C;
+  --color-checked: #FFFFFF;
+  --indicator-color: #BED700;
+  --indicator-height: 4px;
+  --margin-bottom: -10px;
+  --padding-bottom: -5px;
+  width: 50%;
+}
+
+ion-datatime {
+  font-size: 26px;
+}
+
+ion-input {
+  --color: #5B5C85;
+  font-size: 12px;
+  border: 1px solid #CFD3D6;
+  border-radius: 10px;
+  width: 95%;
+  margin: 8px;
+}
+
+#tituloCorpo {
+  color: #5B5C65;
+  font-size: 13px;
+}
+
+#ionCard1 {
+  --background: #FFFFFF;
+  --color: #00995D;
+  border: 1 solid #CFD3D6;
+  border-radius: 10px;
+  box-shadow: 2dp 6dp;
+  font-size: 16px;
+}
+
+#ionCard2 {
+  --background: #FFFFFF;
+  --color: #00995D;
+  border: 1 solid #CFD3D6;
+  border-radius: 10px;
+  box-shadow: 2dp 6dp;
+  font-size: 16px;
+}
+
+#hr {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #CFD3D6;
+}
+
+#tituloLista {
+  margin: -5px 0px 5px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #5B5C65;
+}
+
+#diaTituloLista {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0px;
+  margin: -10px 0px -8px 0px;
+  font-size: 33px;
+  color: #5B5C65;
+}
+
+#mesTituloLista {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0px;
+  margin: -5px 0px 0px 0px;
+  font-size: 16px;
+  color: #00995D;
+}
+
+#listAnivers {
+  margin: -10px 0px 0px 0px;
+}

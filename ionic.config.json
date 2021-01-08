@@ -1,0 +1,7 @@
+{
+  "name": "itixTest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

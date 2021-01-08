@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="header">
+    <ion-menu-button slot="end"></ion-menu-button>
+    <ion-title class="ion-text-uppercase" color="header-font">
+      <i class="fas fa-chevron-left" (click)="abrirPagina()"></i>
+      {{ folder }}
+    </ion-title>  
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content color="body-background">
+  <ion-segment (ionChange)="alterarSegment($event)">
+    <ion-segment-button value="anivers">
+      <ion-label>Aniversariantes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="unimeds">
+      <ion-label>Unimed</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-list *ngIf="escolha == 'anivers'">
+    <h1 id="tituloCorpo">Veja os cooperados que comemoram aniversário. Selecione uma data ou pesquise pelo nome.</h1>
+    <ion-card id="ionCard1">
+      <ion-card-content>
+        <ion-row class="ion-margin-star ion-no-margin ion-no-padding">
+          <ion-col size="1" class="ion-no-margin ion-align-self-start">
+            <i class="fas fa-calendar-alt fa-2x" (click)="abrePicker()"></i>
+          </ion-col>
+          <ion-col size="10" class="ion-no-margin ion-no-padding ion-align-self-start">
+            <div class="ion-text-uppercase">
+              <ion-datetime class="ion-padding-bottom" displayFormat="MMMM YY" min="1950-01-01" max="2030-12-31" value="2020-01-06T13:47:20.789"></ion-datetime>
+            </div>
+          </ion-col>
+          <ion-col size="1" class="ion-no-margin ion-padding-top ion-text-end">
+            <i class="fas fa-caret-right fa-lg" (click)="abrePicker()"></i>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+    <ion-input placeholder="Nome do aniversariante"></ion-input>
+    <ion-card id="ionCard2">
+      <ion-card-header calss="ion-no-margin ion-no-padding">
+        <ion-card-title id="hr" class="ion-no-margin ion-no-padding">
+          <ion-row class="ion-margin-start ion-no-padding">
+            <ion-col size="10" class="ion-padding-vertical ion-text-start ion-text-uppercase">
+              <div id="tituloLista">Aniversariantes do dia</div>
+            </ion-col>
+            <ion-col size="2" class="ion-no-padding ion-no-margin ion-text-center">
+              <div id="diaTituloLista">
+                20
+              </div>
+              <div id="mesTituloLista">
+                jan
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-card-title>
+      </ion-card-header>
+      <hr>
+      <ion-card-content id="listAnivers" class="ion-no-margin ion-no-padding">
+        <ion-list *ngFor="let sariante of sariantes, let i = index">
+          <ion-item class="ion-margin-start ion-no-padding" (click)="abrirItemListaSariantes(i)">
+            <ion-label>
+              {{ sariante.nome }}
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  
+  <ion-list *ngIf="escolha == 'unimeds'">
+    <ion-item>Unimed Rj</ion-item>
+    <ion-item>Unimed Vit</ion-item>
+    <ion-item>Unimed SP</ion-item>
+  </ion-list>
+</ion-content>
